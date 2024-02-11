@@ -19,6 +19,6 @@ console.log(name1.length)
 
 const value: number[] = [1, 3, 4, 7, 9]    // this is array of number
 const value1: string = "Hello world!"    // this is not array is string
-const value2: object = { name: "raza", age: 24 }    // this is not array is object
+const value2: { name: string; age: number } = { name: "raza", age: 24 }    // this is not array is object
 const value3: boolean[] = [true, false, true]    // this is array boolean array
 const value4: number = 23 // this is not array is number
