@@ -23,7 +23,7 @@ const calculateAverage = (values: number[]): number => {
 // function invocation or call
 console.log(calculateAverage([5, 7, 4, 6, 9]))
 
-// calculate Average
+//  max number in array
 // function declarion or define
 const maxNumber = (values: number[]): number => {
     let max = Math.max(...values)

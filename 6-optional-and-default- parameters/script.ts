@@ -19,7 +19,7 @@ const greet = (name: string, id: number = 1): string => {   //   name and id cal
     return `welcom ${name} your id is ${id}`
 }
 
-greet("hasnai")  // hasnain and 5 called arguments
+greet("hasnai")  // hasnain  called arguments
 
 // optional parameters
 const greet1 = (name: string, id?: number): string => {   //   name and id called parameters id is  optional ?symbol denote the optional parameter
@@ -30,4 +30,4 @@ const greet1 = (name: string, id?: number): string => {   //   name and id calle
     }
 }
 
-greet1("hasnai")  // hasnain and 5 called arguments
+greet1("hasnai")  // hasnain  called arguments
