@@ -71,3 +71,30 @@ const calculateGradeAverage = (grades: SubjectGrade[]) => {
 
 console.log(calculateGradeAverage(studentGrade))
 
+//Question 3:
+// you are working on weather application , and you need to store weather data for different cities. Define a tuple type called weatherData to represent weather information, containg the follwing element.
+
+//city name(string)
+//Temperature in celcius(number)
+// weater condition(string)
+//create a function called displayWeather that takes an array of weather Data and display the weather information for each city in a user friendly format.
+
+
+type WeatherData = readonly [string, number, string]
+
+let weatherInfo: WeatherData[] = [
+    ["Faisalabad", 18, "Sunny"],
+    ["Gojra", 23, "Clear"],
+    ["Lahore", 12, "Rainy"]
+]
+
+const displayWeather = (data: WeatherData[]) => {
+    return data.map((info) => {
+        const [city, temperature, condition] = info
+        return `City: ${city}, Temperature: ${temperature}°C, Condition: ${condition}`;
+    }).join("\n")
+
+}
+
+
+console.log(displayWeather(weatherInfo))

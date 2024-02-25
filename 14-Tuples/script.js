@@ -30,3 +30,15 @@ const calculateGradeAverage = (grades) => {
     return averageGrade;
 };
 console.log(calculateGradeAverage(studentGrade));
+let weatherInfo = [
+    ["Faisalabad", 18, "Sunny"],
+    ["Gojra", 23, "Clear"],
+    ["Lahore", 12, "Rainy"]
+];
+const displayWeather = (data) => {
+    return data.map((info) => {
+        const [city, temperature, condition] = info;
+        return `City: ${city}, Temperature: ${temperature}°C, Condition: ${condition}`;
+    }).join("\n");
+};
+console.log(displayWeather(weatherInfo));
