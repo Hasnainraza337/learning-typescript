@@ -19,3 +19,14 @@ const displyProductInfo = (product) => {
 };
 console.log(displyProductInfo(product1));
 console.log(displyProductInfo(product2));
+let studentGrade = [
+    ["Math", 90],
+    ["English", 85],
+    ["Science", 80],
+];
+const calculateGradeAverage = (grades) => {
+    let totalGrade = grades.reduce((total, grade) => total + grade[1], 0);
+    let averageGrade = totalGrade / grades.length;
+    return averageGrade;
+};
+console.log(calculateGradeAverage(studentGrade));

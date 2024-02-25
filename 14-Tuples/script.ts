@@ -34,7 +34,7 @@ console.log(displayPersonInfo(person2))
 // name, price quantity 
 // display the information of product by using this tuple type
 
-type ProductInfo = [string, number, number]
+type ProductInfo = readonly [string, number, number]
 
 const product1: ProductInfo = ["Laptop", 5000, 3]
 const product2: ProductInfo = ["Watch", 1400, 8]
@@ -46,4 +46,28 @@ const displyProductInfo = (product: ProductInfo) => {
 
 console.log(displyProductInfo(product1))
 console.log(displyProductInfo(product2))
+
+//Question 2:
+//you are creating a student management system and want to keep track of student grades for different subjects.Define a tuple type called subjectGrade to represent a subject and its corresponding grade, containing the following elements.
+
+//Subject name(string)
+//Subject grade(number)
+//create an array of subjectgrade tuples to store the grades for student in three different  subjects:Math,Englishand science. calculate and display the average grade for the student.
+
+type SubjectGrade = readonly [string, number]
+
+let studentGrade: SubjectGrade[] = [
+    ["Math", 90],
+    ["English", 85],
+    ["Science", 80],
+]
+
+const calculateGradeAverage = (grades: SubjectGrade[]) => {
+
+    let totalGrade = grades.reduce((total, grade) => total + grade[1], 0)
+    let averageGrade = totalGrade / grades.length
+    return averageGrade
+}
+
+console.log(calculateGradeAverage(studentGrade))
 
