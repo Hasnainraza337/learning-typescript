@@ -41,12 +41,17 @@ console.log(booleanResult)
 // const result1: any = add(5, 10)
 // const result2: any = add("Hello", "world")
 
+// when we use generic and non generic type together then while calling the function we need to defined the type in a manner but with non generic we don't.
 
 // Here is the function overloading Example with generics
+//multiple type variable
 
-// function add<T>(a: T, b: T): T {
-//     return a + b
-// }
+function add<T, U>(a: T, b: U) {
+    console.log(typeof a)
+    console.log(typeof b)
+}
 
-// const result1: number = add(5, 10)
-// const result2: string = add("Hello", "world") 
+// const result1 = add<number>(5, 10)
+// const result1 = add<number>(5, "Hi")  // not work  for this we use multiple type
+const result1 = add<number, string>(5, "Hi")
+const result2 = add("Hello", true) 
