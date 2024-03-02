@@ -38,7 +38,7 @@ class Student extends Person {
 
 const person1: Person = new Person("Raza", 15, ["reading", "playing"])
 const person2: Person = new Person("Ali", 13, ["painting", "playing"])
-const student1: Person = new Student("Ali", 13, ["painting", "playing"], 10)
+const student1: Student = new Student("Ali", 13, ["painting", "playing"], 10)
 
 
 console.log(person1)
