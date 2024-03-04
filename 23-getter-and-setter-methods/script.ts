@@ -68,7 +68,7 @@ class BankAccount {
     // updated  set balance
     public set balance(newBalance: number) {
 
-        if (this.balance + newBalance < 0) {
+        if ( newBalance < 0) {
             throw new Error("cannot set negative balance")
         }
         this._balance = newBalance
