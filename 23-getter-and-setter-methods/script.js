@@ -49,7 +49,7 @@ class BankAccount {
     }
     // updated  set balance
     set balance(newBalance) {
-        if (this.balance + newBalance < 0) {
+        if (newBalance < 0) {
             throw new Error("cannot set negative balance");
         }
         this._balance = newBalance;
@@ -73,11 +73,11 @@ class Temperature {
     constructor() {
         this._celsius = 0;
     }
-    // getter method
+    // getter method celsius
     get celsius() {
         return this._celsius;
     }
-    // setter method
+    // setter method celsius
     set celsius(value) {
         this._celsius = value;
     }
@@ -86,8 +86,8 @@ class Temperature {
         return (this._celsius * 9 / 5) + 32;
     }
     // setter method fahrenheit
-    set fahrenheit(value) {
-        this._celsius = (value - 32) * 5 / 9;
+    set fahrenheit(F) {
+        this._celsius = (F - 32) * 5 / 9;
     }
 }
 const checkTemperature = new Temperature();

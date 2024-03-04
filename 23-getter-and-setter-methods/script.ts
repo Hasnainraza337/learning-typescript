@@ -99,12 +99,12 @@ console.log(accountBalance.balance)
 class Temperature {
     private _celsius: number = 0
 
-    // getter method
+    // getter method celsius
     public get celsius() {
         return this._celsius
     }
 
-    // setter method
+    // setter method celsius
     public set celsius(value: number) {
         this._celsius = value
     }
@@ -114,8 +114,8 @@ class Temperature {
         return (this._celsius * 9 / 5) + 32
     }
     // setter method fahrenheit
-    public set fahrenheit(value: number) {
-        this._celsius = (value - 32) * 5 / 9
+    public set fahrenheit(F: number) {
+        this._celsius = (F - 32) * 5 / 9
     }
 }
 
